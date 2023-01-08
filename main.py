@@ -18,3 +18,13 @@ class FileOrganizer:
                 os.makedirs(f'{self.file_path}/{extension}')
                 shutil.move(f'{self.file_path}/{file}',
                             f'{self.file_path}/{extension}/{file}')
+
+
+def main():
+    file_path = input('Enter file path: ')
+    organizer = FileOrganizer(file_path)
+    organizer.organize()
+
+
+if __name__ == '__main__':
+    main()
